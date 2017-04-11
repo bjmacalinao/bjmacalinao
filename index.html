@@ -1,0 +1,528 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>My Portfolio</title>
+
+	<!-- CSS -->
+	
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap-theme.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Quicksand" rel="stylesheet">
+	<!-- End CSS -->
+
+	<!-- Javascript -->
+	<script type="text/javascript" src="javascript/jquery-3.2.0.js"></script>
+	<script type="text/javascript" src="javascript/javascript.js"></script>
+	<script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+
+
+
+	<!-- End Javascript -->
+
+	<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+</head>
+<body class="fadeLoad">
+
+	
+
+	<!-- Nav -->
+	 <nav class="navbar  navbar-fixed-top  navbar-custom navAnimate">
+  		<div class="container-fluid">
+    		<div class="navbar-header">
+      			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+        			<span class="icon-bar"></span>
+      			</button>
+
+    		</div>
+    	<div class="collapse navbar-collapse" id="myNavbar">
+      		<ul class="nav navbar-nav pull-right">
+        		<li style="padding-top: 8px;"><a class="navLinks" href="#startchange" >Home</a></li>
+        		<li style="padding-top: 8px;"><a  class="navLinks" href="#aboutSect" >About</a></li>
+        		<li style="padding-top: 8px;"><a class="navLinks" href="#skillSetSect">Skillset</a></li>
+        		<li style="padding-top: 8px;"><a class="navLinks" href="#toolBoxSect">Toolbox</a></li>
+        		<li style="padding-top: 8px;"><a class="navLinks" href="#craftsSect">Crafts</a></li>
+        		<li style="padding-top: 8px;"><a class="navLinks" href="#contactMeSect">Contact</a></li>
+        		<li style="padding-top: 0px;"><a> <button type="button" class="hireMe" data-toggle="modal" data-target="#myModal"> Hire Me </button> </a></li>
+      		</ul>
+    	</div>
+  		</div>
+	</nav>
+	<!-- End Nav -->
+	<!-- Banner -->
+
+	<!-- Modal -->
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+       <center><a href="cv.html" title="" target="_blank"> <h4> <i class="fa fa-eye" aria-hidden="true"></i> View Curriculum Vitae </h4></a> </center>
+      </div>
+      <div class="modal-body">
+      
+        <form method="POST" action="hire.php">
+			<center><h1>About You</h1></center>
+        	<div class="form-group">
+   			 	<label for="Name">Full Name:</label>
+    		 	<input type="text" class="form-control" name="hireFullName" required="">
+  			</div>
+
+  			<div class="form-group">
+   			 	<label for="Position">Position:</label>
+    		 	<input type="text" class="form-control"  name="hireSenderPosition" placeholder="Example: HR Officer" required="">
+  			</div>
+
+  			<div class="form-group">
+   			 	<label for="compName">Company/Agency Name:</label>
+    		 	<input type="text" class="form-control"  name="hireCompName" required="">
+  			</div>
+
+			 <div class="form-group">
+   			 	<label for="email">Email Address:</label>
+    		 	<input type="email" class="form-control"  name="hireSenderEmail" required="">
+  			</div>
+  			<br>
+  			<center> <h1>Your Offer</h1> </center>
+
+  			<div class="form-group">
+ 				 <label for="sel1">Job Type:</label>
+				  <select class="form-control"  name="hireJobOffer" required="">
+				    <option>Full -Time </option>
+				    <option>Part -Time </option>
+				    <option>Freelance</option>
+				  </select>
+			</div>
+
+			<div class="form-group">
+ 				 <label for="sel1">Job Description</label>
+				  <select class="form-control"  name="hirePositionOffer" required="">
+				    <option>Web/ Mobile App Designer</option>
+				    <option>Graphic Designer</option>
+				    <option>UI/UX Designer</option>
+				    <option>Web Developer ( Front End )</option>
+				    <option>Web Developer ( Back End )</option>
+				  </select>
+			</div>
+
+
+			<!-- <div class="g-recaptcha" data-sitekey="6LeV2iITAAAAANLTCTgp4mTQdAEtBUZaehA-nIe4"></div>
+ -->
+
+
+
+      </div> 
+      <div class="modal-footer">
+      	<button type="Submit" value="hireSubmit" name="hireSubmit" class="btn btn-lg btn-info">Submit</button>
+        <button type="button" class="btn btn-danger btn-lg" data-dismiss="modal">Close</button>       
+      </div>
+      </form> 
+</div>
+</div>
+</div>
+	<div class="container-fluid banner" id="startchange">
+		<center>
+			<div class=" container row introduction">
+				<h3> HI! I AM</h3>
+				<center><h1 class="introName"> BRYAN JAMES S. MACALINAO</h1></center>
+
+				<br>
+				
+
+						<center><div class="container row introContainer">
+							<p class="container row introP">I am a <b> Web & Graphic Designer, Front End Developer, </b> and an amateur  <b>UX Designer</b> based in <b>Tarlac, Philippines. </b> <br>
+
+							I love to design and develop beautiful and effective user interfaces for web and mobile applications. I consider every 	<br>
+
+							aspect of the project to achieve not just something that looks beautiful, but actually works and achieve it's purpose.
+							</p>
+						</div> </center>
+
+
+
+
+			</div>
+
+			<div class=" container-fluid mouse_scroll">
+
+					<div class="mouse">
+						<div class="wheel"></div>
+					</div>
+				<div>
+					<span class="m_scroll_arrows unu"></span>
+					<span class="m_scroll_arrows doi"></span>
+					<span class="m_scroll_arrows trei"></span>
+				</div>
+				</div>
+			</div>
+
+		</center>
+
+	</div>
+
+
+	<!-- End Banner
+
+	<!-- Start Banner -->
+
+	<div class="container aboutMe" >
+		<h1 class="aboutHeader" id="aboutSect">ABOUT</h1>
+		<br>
+		<div class="container col-lg-6 col-md-6 col-sm-6 col-xs-12 aboutText">
+			<h3> Bryan James: A Digital Creative and more...</h3><br>
+
+			<p class="aboutP"> I'm a  <b>Creative Designer </b> and a  <b> Front - End Developer </b> specialising in <b>Web Design</b>, <b>Front - End Development</b>, <b>Graphic Design</b>, and <b> UX Design</b>.  I create simple solutions to complex problems. I work with passion and creativity while considering different design principles and coding disciplines to craft a beautiful design, seamless experience, and a functional user interface.</p>
+			<br>
+			<p class="aboutP"> When I'm not messing around with pixels, I spend most of my time with my family. I also read books, listen to my favorite music, play computer or mobile games, watch movies, and study different things about design.
+			</p>
+			<br>
+			<p class="aboutP"> I'm currently a freelancer at <b>Code Avenue</b>. I'm also actively looking for a progressive company where I can showcase my skills and talents.
+			</p>
+		</div>
+
+		<div class="container col-lg-6 col-md-6 col-sm-6 col-xs-12 aboutPic">
+
+			<img class="img-responsive img-rounded" src="assets/img/mepc.jpg" alt="Bryan James On The Move! ">
+
+		</div>
+	</div>
+	<!-- End About -->
+
+	<!-- Skillset -->
+	<div class="container skillSet">
+		<h1 class="skillSetHeader" id="skillSetSect">SKILLSET</h1>
+		<br>
+		<br>
+		<br>
+		<br>
+		<div class="skillOne col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="container oneIco col-lg-5 col-md-5 col-sm-5">
+				<img class="img-responsive" src="assets/icon/web-design-2.png" alt="Web Design Icon">
+			</div>
+			<div class="container oneDesc col-lg-7 col-md-7 col-sm-7 col-xs-12">
+				<center><h3 class="subHeadings"> Web & Mobile Design</h3></center>
+
+				<p class="skillDesc">I love to create beautiful and effective user interfaces for web and mobile
+				 applications. I consider different design principles and current design trends to craft a beautiful 
+				 and effective design.</p>
+
+			</div>
+		</div>
+		<div class="skillTwo col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="container twoIco col-lg-5 col-md-5 col-sm-5 col-xs-12">
+				<img class="img-responsive" src="assets/icon/coding.png" alt="Front End Development Icon">
+			</div>
+
+			<div class="container twoDesc col-lg-7 col-md-7 col-sm-7 col-xs-12">
+				<center><h3 class="subHeadings"> Front - End Development</h3></center>
+
+				<p class="skillDesc">I integrate programming and design to build not just a beautiful design but also
+					a functional one. I use current technology trends to build a good user interface of a website/ Application. </p>
+
+			</div>
+
+		</div>
+		<div class="skillThree col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="container threeIco col-lg-5 col-md-5 col-sm-5 col-xs-12">
+				<img class="img-responsive" src="assets/icon/graphic-design-2.png" alt="Graphic Design Icon">
+			</div>
+
+			<div class="container threeDesc col-lg-7 col-md-7 col-sm-7 col-xs-12">
+				<center><h3 class="subHeadings"> Graphic Design</h3></center>
+
+				<p class="skillDesc">Aside from designing web and mobile app interfaces, I also love to do graphic
+				 design. I do photo concepts, photo editing and simple video editing. I create logos, brochures, flyers, tarpaulins, poster, and business card designs.</p>
+
+			</div>
+
+		</div>
+		<div class="skillFour col-lg-6 col-md-6 col-sm-6 col-xs-12">
+			<div class="container fourIco col-lg-5 col-md-5 col-sm-5 col-xs-12">
+				<img class="img-responsive" src="assets/icon/graphic-design-3.png" alt="UX Design Icon">
+			</div>
+
+			<div class="container fourDesc col-lg-7 col-md-7 col-sm-7 col-xs-12">
+				<center><h3 class="subHeadings"> UX Design</h3></center>
+
+				<p class="skillDesc">Cool design doesn't mean it is usable. I do not only consider design principles but also
+				I consider user experience design principles to craft a seamless experience for the user of the application/ system.</p>
+
+			</div>
+
+		</div>
+		</div>
+
+		<!-- End Skillset -->
+
+		<!-- Toolbox -->
+		<div class="container toolBox">
+			<h1 class="toolBoxHeader" id="toolBoxSect">Toolbox</h1>
+			<br>
+
+			<div class="button-group filters-button-group">
+			<button class="button is-checked" data-filter="*">All</button>
+    		<button class="button" data-filter=".webDesign">Web & Mobile Design</button>
+    		<button class="button" data-filter=".graphicDesign">Graphic Design</button>
+    		<button class="button" data-filter=".frontEndDev">Front End Development</button>
+    		<button class="button" data-filter=".backEndDev">Back End Development</button>
+    		<button class="button" data-filter=".uxDesign">UX Design</button>
+
+    		</div>
+			<br>
+			<br>
+
+			<div class="container toolBoxCont">
+
+				<section id="grid-container" class="transitions-enabled fluid masonry js-masonry grid">
+
+				<article class="frontEndDev">
+
+						<img class="img-responsive" src="assets/icon/html5.png" alt="html5 icon">
+
+				</article>
+
+				<article class="frontEndDev">
+
+					<img class="img-responsive" src="assets/icon/css3.png" alt="css3 icon">
+				</article>
+
+				<article class="frontEndDev">
+					<img class="img-responsive" src="assets/icon/js.png" alt="javascript icon">
+				</article>
+
+				<article class="backEndDev">
+					<img class="img-responsive" src="assets/icon/php.png" alt="php icon">
+				</article>
+
+				<article class="backEndDev">
+					<img class="img-responsive" src="assets/icon/mySQL.png" alt="mySQL icon">
+				</article>
+
+				<article class="frontEndDev">
+					<img class="img-responsive" src="assets/icon/sass.png" alt="SASS icon">
+				</article>
+
+				<article class="frontEndDev">
+					<img class="img-responsive" src="assets/icon/less.png" alt="LESS icon">
+				</article>
+
+				<article class="frontEndDev">
+					<img class="img-responsive" src="assets/icon/jquery.png" alt="jquery icon">
+				</article>
+
+
+
+
+				<article class="webDesign graphicDesign uxDesign">
+					<img class="img-responsive" src="assets/icon/ps.png" alt="Photoshop icon">
+				</article>
+
+				<article class="webDesign graphicDesign">
+					<img class="img-responsive" src="assets/icon/AI.png" alt="Illustrator icon">
+				</article>
+
+				<article class="graphicDesign" >
+					<img class="img-responsive" src="assets/icon/AE.png" alt="After Effects icon">
+				</article>
+
+				<article class="uxDesign">
+					<img class="img-responsive" src="assets/icon/XD.png" alt="XD Beta icon">
+				</article>
+
+				<article class="frontEndDev backEndDev">
+					<img class="img-responsive" src="assets/icon/st.png" alt="Sublime Text icon">
+				</article>
+
+				<article class="frontEndDev backEndDev">
+					<img class="img-responsive" src="assets/icon/atom.png" alt="Atom icon">
+				</article>
+
+				<article class="frontEndDev backEndDev">
+					<img class="img-responsive" src="assets/icon/github.png" alt="Git icon">
+				</article>
+
+				<article class="frontEndDev backEndDev">
+					<img class="img-responsive" src="assets/icon/B.png" alt="Bootstrap icon">
+				</article>
+
+
+				</section>
+
+			</div>
+
+
+		</div>
+
+
+		<!-- End Toolbox -->
+
+		<!-- Crafts -->
+			<div class="container crafts">
+				<h1 class="craftsHeader" id="craftsSect"> Crafts </h1>
+					<br>
+					
+					<div class="container craftsCont">
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						<h2> HELLO WORLD!</h2>
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+					<div class="container crafts-icon col-md-3 col-lg-3">
+						
+					</div>
+
+
+
+
+					</div>
+					
+
+			</div>
+		<!-- End Crafts -->
+
+		<!-- Contact -->
+
+		<div class="container-fluid contactMe">
+			<div class="contactArea col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<h1 class="contactHeader" id="contactMeSect">Contact Me</h1>
+				<br>
+
+				<form class="form-horizontal" role="form" method="POST" action="mail.php">
+				 	<div class="form-group">
+   					  <label for="Name">Full Name:</label>
+    					<input type="text" class="form-control" name="name" required="">
+  					</div>
+
+				 	<div class="form-group">
+   					  <label for="email">Email Address:</label>
+    					<input type="email" class="form-control" name="email" required="">
+  					</div>
+
+  					<div class="form-group">
+  						<label for="message">Message:</label>
+  						<textarea class="form-control" rows="5" name="message" required=""></textarea>
+					</div>
+					
+  
+  					<center><button type="submit"  name="submit" class="btn btn-lg btn-success"><i class="fa fa-paper-plane-o" aria-hidden="true"></i> Submit</button></center>
+				</form>
+
+			</div>
+
+
+
+
+
+
+
+			<div class="followArea col-lg-6 col-md-6 col-sm-6 col-xs-12">
+				<h1 class="contactHeader">Follow Me On</h1>
+				<div class="footer-social-icons">
+
+   		 			<ul class="social-icons">
+        				<li><a href="https://www.facebook.com/public/Bryan-James-Samson" class="social-icon" style="text-decoration: underline;"> <i class="fa fa-facebook"></i></li> Facebook </a> <br> <br>
+        				<li><a href="" class="social-icon" style="text-decoration: underline;"> <i class="fa fa-instagram"></i></li> Instagram </a><br> <br>
+        				<li><a href="https://ph.linkedin.com/in/bryan-james-macalinao-268aaa137" class="social-icon" style="text-decoration: underline;"> <i class="fa fa-linkedin"></i></li> Linkdn </a><br> <br>
+        				<li><a href="" class="social-icon" style="text-decoration: underline;"> <i class="fa fa-tumblr"></i></li> Tumblr </a><br> <br>
+        				<li><a href="" class="social-icon" style="text-decoration: underline;"	> <i class="fa fa-twitter"></i></li> Twitter </a><br> <br>
+
+    				</ul>
+
+				</div>
+
+			</div>
+
+			</div>
+			</div>
+
+		<!-- End Contact -->
+
+		<!-- footer -->
+
+			<footer>
+				<center>  Design and Developed by: Bryan James S. Macalinao </center>
+			</footer>
+
+
+
+		<!-- End footer -->
+		
+	</body>
+<!-- other Scripts -->
+<script src="https://use.fontawesome.com/6fe758d708.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+<script src='http://cdn2.hubspot.net/hub/322787/hub_generated/style_manager/1440007714979/custom/page/hack-a-thon-3/masonry.min.min.js'></script>
+<script src='http://cdn2.hubspot.net/hub/322787/hub_generated/style_manager/1440007849180/custom/page/hack-a-thon-3/isotope.min.js'></script>
+
+<script>
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1500);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+
+
+
+</html>

@@ -1,0 +1,871 @@
+@mixin breakpoint($point)
+{
+    @if $point == desktop
+    {
+        @media (min-width: 70em)
+        {
+            @content ;
+        }
+    }
+    @else if $point == laptop
+    {
+        @media (min-width: 64em)
+        {
+            @content ;
+        }
+    }
+    @else if $point == tablet
+    {
+        @media (min-width: 50em)
+        {
+            @content ;
+        }
+    }
+    @else if $point == phablet
+    {
+        @media (min-width: 37.5em)
+        {
+            @content ;
+        }
+    }
+    @else if $point == mobileonly
+    {
+        @media (max-width: 37.5em)
+        {
+            @content ;
+        }
+    }
+}
+
+
+@mixin respond-to($breakpoint)
+{
+    @if $breakpoint == 'xs'
+    {
+        @media screen and (max-width: 767px)
+        {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'sm'
+    {
+        @media (min-width: 768px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1)
+        {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'md'
+    {
+        @media (min-width: 1025px) and (max-width: 1199px)
+        {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'lg'
+    {
+        @media screen and (min-width: 1200px) and (max-width: 1399px)
+        {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'xlg'
+    {
+        @media (min-width: 1400px) and (max-width: 1599px)
+        {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'xxlg'
+    {
+        @media (min-width: 1600px) and (max-width: 1899px)
+        {
+            @content;
+        }
+    }
+    @else if $breakpoint == 'xxxlg'
+    {
+        @media (min-width: 1900px)
+        {
+            @content;
+        }
+    }
+}
+
+//variables
+$primary-color: #0f3443;
+$white: #fff;
+$secondary-color:#b39800;
+$hire-btn-color: #2ECC71;
+$banner-bg: url('../assets/img/banner.png');
+$aboutPic-bg: url('../assets/img/mepc.jpg');
+$skillSetOne-ico: url('../assets/icon/web-design-2.png');
+
+// end variables
+
+//Loading
+
+.fadeLoad
+{
+    animation: fadein 3s;
+    -moz-animation: fadein 3s; /* Firefox */
+    -webkit-animation: fadein 3s; /* Safari and Chrome */
+    -o-animation: fadein 3s; /* Opera */
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+footer {
+    margin-bottom:30px;
+    color:white !important;
+}
+
+
+
+
+
+//End Loading
+
+
+body
+{
+    font-family: 'Quicksand', sans-serif !important;
+	overflow-x: hidden;
+    
+    // start nav
+
+
+    nav
+    {
+
+    	
+    	.navAnimate {
+     	   
+     	   transition: .5s !important;
+    }
+        ul
+        {
+            li
+            {
+                a
+                {
+                    font-size: 16px;
+                    font-weight: bold;
+
+                    color: $white !important;
+                }
+                a:hover {
+                	background-color: transparent !important;
+                }
+
+                .navLinks:hover {
+
+                	background-color: $primary-color + 20 !important;
+                	transition: 1s;
+                }
+
+                .navLinks:visited,
+                .navLinks:focus,
+                .navLinks:active {
+
+                	background-color: $primary-color + 20 !important;
+                	transition: 1s;
+                }
+
+
+
+        
+                .hireMe
+                {
+                    min-height: 35px;
+                    transition: .5s;
+                    color: $hire-btn-color;
+                    border: solid 1px;
+                    background-color: transparent !important;
+                }
+
+                .hireMe:hover,
+                .hireMe:active
+                
+                {
+                    transition: .5s;
+                    color:$primary-color !important;
+                    border: solid 1px $hire-btn-color;
+                    background-color: $hire-btn-color !important;
+                    outline: 0px !important;
+                }
+
+                .hireMe {
+                	@extend .hireMe;
+                	outline: 0px !important;
+                }
+
+
+                
+            }
+        }
+       
+    }
+
+
+.navbar-toggle {
+  border: none !important;
+}
+
+
+.navbar-collapse {
+  border: none !important;
+}
+
+
+.navbar-toggle:active,
+.navbar-toggle:focus {
+	background-color: $primary-color + 5 !important;
+}
+
+.navbar-toggle:visited {
+	background: none !important;
+}
+
+.navbar-toggle .icon-bar {
+  background: $white !important;
+}
+
+.navbar-collapse .collapse.in {
+	transition: ease 1s;
+	background-color: $primary-color !important;
+}
+
+
+    // end nav
+    // start banner
+    .introduction
+    {
+        margin-top: 150px !important;
+        margin: auto;
+    }
+    .banner
+    {
+        min-width: 100%;
+        min-height: 660px;
+
+        color: $white;
+        background-image: $banner-bg;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        background-size: cover;
+    }
+    .introName
+    {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    .introContainer
+    {
+        margin: auto;
+        height: 100%;
+        width: 100%;
+    }
+    .introP
+    {
+        font-size: 18px;
+
+        
+    }
+    // mouse scroll animation
+    *,
+    *:before,
+    *:after
+    {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+    }
+    .mouse_scroll
+    {
+        display: block;
+
+        width: 24px;
+        height: 100px;
+        margin: 0 auto;
+        //background: blue;
+        margin-top: 125px;
+    }
+    .m_scroll_arrows
+    {
+        display: block;
+
+        width: 5px;
+        width: 16px;
+        height: 5px;
+        height: 16px;
+        margin: 0 0 3px 4px;
+
+        -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+            -ms-transform: rotate(45deg); /* IE 9 */
+                transform: rotate(45deg);
+
+        border-right: 2px solid white;
+        border-bottom: 2px solid white;
+    }
+    .unu
+    {
+        margin-top: 1px;
+    }
+    .unu,
+    .doi,
+    .trei
+    {
+        -webkit-animation: mouse-scroll 1s infinite;
+           -moz-animation: mouse-scroll 1s infinite;
+    }
+    .unu
+    {
+        -webkit-animation-delay: .1s;
+           -moz-animation-delay: .1s;
+        -webkit-animation-direction: alternate;
+    }
+    .doi
+    {
+        margin-top: -6px;
+
+        -webkit-animation-delay: .2s;
+           -moz-animation-delay: .2s;
+        -webkit-animation-direction: alternate;
+    }
+    .trei
+    {
+        margin-top: -6px;
+
+        -webkit-animation-delay: .3s;
+           -moz-animation-delay: .3s;
+        -webkit-animation-direction: alternate;
+    }
+    .mouse
+    {
+        top: 170px;
+
+        width: 24px;
+        height: 42px;
+
+        transform: none;
+
+        border: 2px solid white;
+        border-radius: 14px;
+    }
+    .wheel
+    {
+        position: relative;
+
+        display: block;
+
+        width: 2px;
+        width: 4px;
+        height: 5px;
+        height: 4px;
+        margin: 5px auto;
+
+        border: 2px solid #fff;
+        -webkit-border-radius: 8px;
+                border-radius: 8px;
+        background: white;
+    }
+    .wheel
+    {
+        -webkit-animation: mouse-wheel .6s linear infinite;
+           -moz-animation: mouse-wheel .6s linear infinite;
+    }
+    @-webkit-keyframes mouse-wheel
+    {
+        0%
+        {
+            -webkit-transform: translateY(0);
+                -ms-transform: translateY(0);
+                    transform: translateY(0);
+
+            opacity: 1;
+        }
+
+        100%
+        {
+            -webkit-transform: translateY(6px);
+                -ms-transform: translateY(6px);
+                    transform: translateY(6px);
+
+            opacity: 0;
+        }
+    }
+    @-moz-keyframes mouse-wheel
+    {
+        0%
+        {
+            top: 1px;
+        }
+        25%
+        {
+            top: 2px;
+        }
+        50%
+        {
+            top: 3px;
+        }
+        75%
+        {
+            top: 2px;
+        }
+        100%
+        {
+            top: 1px;
+        }
+    }
+    @-webkit-keyframes mouse-scroll
+    {
+        0%
+        {
+            opacity: 0;
+        }
+        50%
+        {
+            opacity: .5;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
+    @-moz-keyframes mouse-scroll
+    {
+        0%
+        {
+            opacity: 0;
+        }
+        50%
+        {
+            opacity: .5;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
+    @-o-keyframes mouse-scroll
+    {
+        0%
+        {
+            opacity: 0;
+        }
+        50%
+        {
+            opacity: .5;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
+    @keyframes mouse-scroll
+    {
+        0%
+        {
+            opacity: 0;
+        }
+        50%
+        {
+            opacity: .5;
+        }
+        100%
+        {
+            opacity: 1;
+        }
+    }
+    // end mouse scroll animation
+    //end banner
+    //About
+    .aboutMe
+    {
+        margin-top: 30px;
+
+        color: $primary-color;
+        .aboutHeader
+        {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 55px;
+            font-weight: bold;
+        }
+        .aboutText
+        {
+            font-family: 'Playfair Display', serif !important;
+
+            min-height: 500px;
+            .aboutP
+            {
+                font-family: 'Quicksand', sans-serif !important;
+                font-size: 16px;
+
+                text-align: justify;
+                text-indent: 30px;
+                
+            }
+        }
+        .aboutPic
+        {
+            min-height: 500px;
+            
+        }
+    }
+    // end About
+    // Skillset
+    .skillSet
+    {
+        // margin-top: 50px;
+		min-height: 500px;
+        color: $primary-color !important;
+        .subHeadings
+        {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .skillDesc
+        {
+            font-size: 16px;
+            text-align: justify;
+            text-indent: 30px;
+        }
+        .skillSetHeader
+        {
+            font-family: 'Playfair Display', serif !important;
+            font-size: 55px;
+            font-weight: bold;
+            color: $primary-color !important;
+        }
+        .skillOne
+        {
+            min-height: 300px;
+            .oneIco
+            {
+                min-height: 100%;
+
+            }
+            .oneDesc
+            {
+                min-height: 100%;
+            }
+        }
+        .skillTwo
+        {
+            min-height: 300px;
+            .twoIco
+            {
+                min-height: 100%;
+            }
+            .twoDesc
+            {
+                min-height: 100%;
+            }
+        }
+        .skillThree
+        {
+            min-height: 300px;
+            .threeIco
+            {
+                min-height: 100%;
+            }
+            .threeDesc
+            {
+                min-height: 100%;
+            }
+        }
+        .skillFour
+        {
+            min-height: 300px;
+            .fourIco
+            {
+                min-height: 100%;
+            }
+            .fourDesc
+            {
+                min-height: 100%;
+            }
+        }
+    }
+    //end Skillset
+    //Toolbox
+    .toolBoxHeader
+    {
+        font-family: 'Playfair Display', serif !important;
+        font-size: 55px;
+        font-weight: bold;
+        color: $primary-color;
+
+    }
+
+    .toolBoxCont {
+		margin:auto !important;
+
+    }
+    .grid article
+    {
+        display:block;
+        width: 20%;
+        margin:23px;    
+        margin-bottom: 195px;
+        height: 100px;
+        
+
+        background-color: transparent;
+    }
+    .button
+    {
+        font-family: sans-serif;
+        font-size: 16px;
+
+        display: inline-block;
+
+        margin: 10px;
+        padding: .5em 1.0em;
+
+        cursor: pointer;
+        -webkit-transition: background .3s;
+           -moz-transition: background .3s;
+                transition: background .3s;
+
+        border: 1px solid $primary-color;
+        border-radius: 4px;
+        background: #fff;
+        color: $primary-color;
+    }
+    .button:hover
+    {
+        background-color: $primary-color;
+        color: $white;
+    }
+    .button:active,
+    .button.is-checked
+    {
+        outline: none;
+        background-color: $primary-color;
+        color: $white !important;
+    }
+    .button-group
+    {
+        margin: 20px 0;
+
+        text-align: center;
+    }
+    .button-group:after
+    {
+        display: block;
+        clear: both;
+        content: '';
+    }
+    //end Toolbox
+
+    // Crafts
+		.crafts {
+
+			min-height: 500px;
+
+			
+
+			.craftsHeader {
+
+				font-family: 'Playfair Display', serif !important;
+            	font-size: 55px;
+            	font-weight: bold;
+            	color: $primary-color !important;
+			}
+
+			.craftsCont {
+
+				padding:40px;
+
+
+				.crafts-icon {
+
+		    		min-height:150px;
+		    		width: 250px;
+		    		background-color: $primary-color !important;
+		    		margin: 10px;
+		    		margin-bottom: 100px;
+		    		border-radius: 15px;
+    			}
+
+
+
+
+			}
+
+
+
+			
+
+		}
+
+    	
+
+    // end Crafts
+
+    //Contact
+
+    .contactMe {
+    	background-color:$primary-color;
+    	min-height: 500px;
+    	min-width: 100%;
+    	
+
+    	.contactHeader {
+    		font-family: 'Playfair Display', serif !important;
+    		color: $white !important;
+    		font-weight: bold;
+    		font-size: 55px;
+    	}
+
+    	label {
+    		color: $white;
+    	}
+
+
+    	
+
+
+    }
+
+    .container-form {
+  width: 50%;
+  min-width: 400px;
+  margin: auto;
+  margin-top: 50px;
+  
+}
+
+
+
+.footer-social-icons {
+    width: 350px;
+    display:inline-block;
+    margin: 0 auto;
+    margin-top: 50px !important ;
+}
+.social-icon {
+    color: #fff;
+    font-size: 18px;
+}
+ul.social-icons {
+    margin-top: 10px;
+}
+.social-icons li {
+    vertical-align: top;
+    display: inline;
+    height: 100px;
+}
+.social-icons a {
+    color: #fff;
+    text-decoration: none;
+}
+.fa-facebook {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    
+}
+.fa-facebook:hover {
+    background-color: #3d5b99;
+}
+.fa-twitter {
+    padding:10px 12px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    ;
+}
+.fa-twitter:hover {
+    background-color: #00aced;
+}
+.fa-tumblr {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+   
+    
+}
+.fa-tumblr:hover {
+    background-color: #35465c;
+
+}
+
+.fa-linkedin {
+    padding:10px 14px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    
+}
+.fa-linkedin:hover {
+    background-color: #0073a4;
+}
+.fa-instagram {
+    padding:10px 9px;
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition: .5s;
+    
+}
+.fa-instagram:hover {
+    background-color: #8a3ab9;
+}
+
+    //end Contact
+
+    //footer
+
+    footer {
+		height: 40px;
+    	background-color:$primary-color - 5 !important;
+    	margin: 0;
+    	color: white;
+    	padding: 10px;
+		
+    //end footer
+    }
+}
