@@ -57,12 +57,16 @@ $(document).ready(function(){
       if(scroll_start > offset.top) {
           $('.navAnimate').css('background-color', '#0f3443');
           $('.navAnimate').css('transition', '0.5s');
+          $('nav').css('height', '90px');
+          
           
           
           $
        } else {
           $('.navAnimate').css('background-color', 'transparent');
           $('.navAnimate').css('transition', '0.5s ease');
+          $('nav').css('height', '100px');
+          
           
           
           
